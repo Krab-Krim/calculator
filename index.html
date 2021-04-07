@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="information text">
+    <p class="heading"><b>Калькулятор стоимости дома из бруса</b><br></p>
+    <div class="result"><span id="result"> 0 </span></div>
+    <div>
+        <form class="area">
+            <label>Ширина <input type="text" id="width" size="6"><br></label>
+            <label>Длина <input type="text" id="length" size="6"><br></label>
+            <input type="button" value="Площадь дома" onclick="plaza();"><br>
+            Каждый м<sup><small>2</small></sup> = 20 000 руб.<br>
+        </form>
+    </div>
+    <div>
+        <form> Тип дома :
+            <label>
+                <select onchange="house()" id="type_house">
+                    <option value="0"> -</option>
+                    <option value="518000"> Дом из бруса под усадку</option>
+                    <option value="909000"> Дом из бруса под ключ</option>
+                </select>
+            </label>
+        </form>
+        Количество комнат :
+        <span class="minus">-</span>
+        <label>
+            <input type="text" value="0" size="5"/>
+        </label>
+        <span class="plus">+</span>
+    </div>
+</div>
+<div class="container info ">
+    <form id="form-calc">
+        <div class="row">
+            <div class="calc-group-input col-4 ">
+                <div class="bar"><p><b>Сухой профилированный брус</b></div>
+                <label><input type="radio" name="test1" value="0"> нет </label><br>
+                <label><input type="radio" name="test1" value="80000"> Брус 145х145мм: - 80 000 руб </label><br>
+                <label><input type="radio" name="test1" value="72000"> Брус 95х145мм: - 72 000 руб </label><br>
+                <label><input type="radio" name="test1" value="89000"> Брус 195х145мм: - 89 000 руб </label><br>
+            </div>
+            <div class="calc-group-input col-4">
+                <div class="bar"><p><b>Дополнительный венец из бруса</b></div>
+                <label><input type="radio" name="test2" value="0"> нет </label><br>
+                <label><input type="radio" name="test2" value="25000"> Брус 145х145мм: - 25 000 руб</label><br>
+                <label><input type="radio" name="test2" value="21000"> Брус 95х145мм: - 21 000 руб</label><br>
+                <label><input type="radio" name="test2" value="34000"> Брус 195х145мм: - 34 000 руб</label><br>
+            </div>
+            <div class="calc-group-input col-4">
+                <div class="bar"><p><b>Фронтоны из профильнного бруса</b></div>
+                <label><input type="radio" name="test3" value="0"> нет </label><br>
+                <label><input type="radio" name="test3" value="87000"> Брус 145х145мм: - 87 000 руб</label><br>
+                <label><input type="radio" name="test3" value="62000"> Брус 95х145мм: - 62 000 руб</label><br>
+                <label><input type="radio" name="test3" value="95000"> Брус 195х145мм: - 95 000 руб</label><br>
+            </div>
+        </div>
+        <div class="calc-group-input">
+            <div class="dop-info"><p><b>Дополнительные усуги и материалы </b></p></div>
+            <div class="fon">
+                <img src="images/1.png" alt="" class="picture">
+            </div>
+            <label><input type="checkbox" name="test5" value="20000"> Подкровельная мембранная пленка: - 20000
+                руб</label><br>
+            <label><input type="checkbox" name="test5" value="59000"> Кровля металлочерепица "Монтерей", толщина
+                0,4-0,5 мм: - 59000 руб</label><br>
+            <label><input type="checkbox" name="test5" value="70000"> Защитно-декоративной покрытие с наружной
+                стороны "Акватекс": - 70000 руб</label><br>
+            <label><input type="checkbox" name="test5" value="20000"> Обработка основания, лаг, черновых полов
+                антисептиком: - 20000 руб</label><br>
+            <label><input type="checkbox" name="test5" value="17000"> Зенкование гвоздей (засвирловка): - 17000
+                руб</label><br>
+            <label><input type="checkbox" name="test5" value="45000"> Сборка брусовых стен на деревянные нагеля: -
+                45000 руб</label><br>
+            <label><input type="checkbox" name="test5" value="103500"> Свайно-винтовой фундамент: - 103500
+                руб</label><br>
+            <label><input type="checkbox" name="test5" value="17000"> Бытовка для проживания бригады 2,3*3,0 м: -
+                17000 руб</label><br>
+            <label><input type="checkbox" name="test5" value="12000"> Аренда генератора на весь срок
+                строительства (бензин заказчика): - 12000 руб</label><br>
+        </div>
+    </form>
+</div>
+</div>
+<script src="//code.jivosite.com/widget/V1AgKWUUcy" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

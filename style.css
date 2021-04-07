@@ -1,0 +1,79 @@
+body {
+    width: 1345px;
+    height: auto;
+    background: url("images/2.png") no-repeat;
+    background-size: 100%;
+}
+/*Шапка сайта */
+.information {
+     text-align: center;
+     margin-top: 26px;
+ }
+.text {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+
+}
+.heading {
+    margin-bottom: 0;
+
+}
+
+/*Результат*/
+.result {
+    padding-bottom: 14px;
+    padding-top: 14px;
+    color: #0a1b80;
+}
+
+/*Тип дома*/
+.house {
+    cursor: pointer
+}
+
+/*Количество комнат*/
+.minus {
+    border: 1px solid #0a298a;
+    padding: 4px;
+    background-color: aliceblue;
+    cursor: pointer
+}
+.plus {
+    border: 1px solid #0a298a;
+    padding: 4px;
+    background-color: aliceblue;
+    cursor: pointer
+}
+/*Картинка дома */
+.fon {
+        width: 500px;
+        height: auto;
+        float: right;
+}
+.picture {
+    width: 527px;
+}
+
+/*Радио и чекбокс*/
+.info {
+    font-family: 'Merriweather', serif;
+    font-size: 13px;
+}
+.col-4 {
+    margin-top: 15px;
+    margin-bottom: 14px;
+}
+
+/*Радио*/
+.bar {
+color: brown;
+    font-size: 16px;
+}
+
+/*Чекбокс*/
+.dop-info {
+    text-align: center;
+    color: #96560bd9;
+    font-weight: bold;
+    font-size: 18px;
+}
